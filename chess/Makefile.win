@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = chess.o
-LINKOBJ  = chess.o
+OBJ      = chess.o global.o move.o printboard.o printstatus.o run.o savegame.o util.o
+LINKOBJ  = chess.o global.o move.o printboard.o printstatus.o run.o savegame.o util.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -26,3 +26,24 @@ $(BIN): $(OBJ)
 
 chess.o: chess.c
 	$(CC) -c chess.c -o chess.o $(CFLAGS)
+
+global.o: global.c
+	$(CC) -c global.c -o global.o $(CFLAGS)
+
+move.o: move.c
+	$(CC) -c move.c -o move.o $(CFLAGS)
+
+printboard.o: printboard.c
+	$(CC) -c printboard.c -o printboard.o $(CFLAGS)
+
+printstatus.o: printstatus.c
+	$(CC) -c printstatus.c -o printstatus.o $(CFLAGS)
+
+run.o: run.c
+	$(CC) -c run.c -o run.o $(CFLAGS)
+
+savegame.o: savegame.c
+	$(CC) -c savegame.c -o savegame.o $(CFLAGS)
+
+util.o: util.c
+	$(CC) -c util.c -o util.o $(CFLAGS)
