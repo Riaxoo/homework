@@ -7,6 +7,17 @@
 #include<stdlib.h>
 
 
+
+
+
+# ifndef UNICODE
+#  define UNICODE
+# endif
+# ifndef _UNICODE
+#  define _UNICODE
+# endif
+
+
 void run(void);
 void quit(void);
 

@@ -48,7 +48,7 @@ int main()
     black_king_moved = 0;
     player = 1;
     number_of_pawns_temp = 32;
-    char move[5], c;
+    char c;
 
     printf("Welcome to Chess\n");
     printf("Do you want to read the instructions? (y/n) ");
@@ -67,11 +67,11 @@ int main()
             // todo instruction.txt de icinde oyunun yuklenebilir oldugunu da belirt.
             // load yazsın 
 
-            c = fgetc(fptr);
-            while (c != EOF)
+            c0 = fgetc(fptr);
+            while (c0 != EOF)
             {
-                printf ("%c", c);
-                c = fgetc(fptr);
+                printf ("%c", c0);
+                c0 = fgetc(fptr);
             }
             fclose(fptr);
         }

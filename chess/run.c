@@ -47,7 +47,7 @@ int playerHasValidMove()
 
 void run(void)
 {
-    char move[5], c;
+    char move[5];
 
     fflush(stdin);
     getchar();

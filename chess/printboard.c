@@ -8,7 +8,7 @@ void printBoard()
     printf("\x1b[30m\x1b[46m   ");//
     int i;
 	for (i=0; i<8;i++)
-        printf(" %c ",col_name[i]);
+        printf("%c ",col_name[i]);
     printf("   \x1b[0m\n");
     int row, p;
 	for (row = 0,p=8;row<8;row++,p--)
@@ -27,43 +27,43 @@ void printBoard()
             switch (board[row][col])
             {
                 case 0:
-                    printf("   ");
+                    printf("  ");
                     break;
                 case -1:
-                    printf(" ♜ ");
+					printf("\u265C ");
                     break;
                 case -2:
-                    printf(" ♞ ");
+					printf("\u265E ");
                     break;
                 case -3:
-                    printf(" ♝ ");
+					printf("\u265D ");
                     break;
                 case -4:
-                    printf(" ♛ ");
+					printf("\u265B ");
                     break;
                 case -5:
-                    printf(" ♚ ");
+					printf("\u265A ");
                     break;
                 case -6:
-                    printf(" ♟ ");
+					printf("\u265F ");
                     break;
                 case 1:
-                    printf(" ♖ ");
+					printf("\u2656 ");
                     break;
                 case 2:
-                    printf(" ♘ ");
+					printf("\u2658 ");
                     break;
                 case 3:
-                    printf(" ♗ ");
+					printf("\u2657 ");
                     break;
                 case 4:
-                    printf(" ♕ ");
+					printf("\u2655 ");
                     break;
-                case 5:
-                    printf(" ♔ ");
+                case 5:;
+					printf("\u2654 ");
                     break;
                 case 6:
-                    printf(" ♙ ");
+					printf("\u2659 ");
                     break;
                 default:
                     break;
@@ -75,6 +75,6 @@ void printBoard()
     }
     printf("\x1b[30m\x1b[46m   ");
 	for (i=0; i<8;i++)
-        printf(" %c ",col_name[i]);
+        printf("%c ",col_name[i]);
     printf("   \x1b[0m\n");
 }
