@@ -69,7 +69,7 @@ void run(void)
             printCheck();
         printf("%s's turn\nEnter your move - ",player?"White":"Black");
         scanf("%s",move);
-        printf("\e[1;1H\e[2J");
+        printf("\e[1;1H\e[2J"); //clrscr
         int len,start[2],end[2];
         len = (int)strlen(move);
         if (len == 1 && (move[0] == 'r' || move[0] == 'R'))

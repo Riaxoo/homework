@@ -5,36 +5,36 @@ void printCheck(void)
 {
     if (player)
     {
-        printf("WHITE KING IN CHECK !!\n");
+        printf("WHITE KING IN CHECK!\n");
     }
     else
     {
-        printf("BLACK KING IN CHECK !!\n");
+        printf("BLACK KING IN CHECK!\n");
     }
 }
 
 void printInvalidMove()
 {
     inactive_moves--;
-    printf("INVALID MOVE\n");    
+    printf("INVALID MOVE!\n");    
 }
 
 void printVictory()
 {
     if (player)
     {
-        printf("WHITE WINS\n");
+        printf("WHITE WINS!\n");
     }
     else
     {
-        printf("BLACK WINS\n");
+        printf("BLACK WINS!\n");
     }
     
 }
 
 void printCheckmate()
 {
-    printf("CHECKMATE !\n");    
+    printf("CHECKMATE!\n");    
 }
 
 void printStalemate()
@@ -54,5 +54,5 @@ void print50()
 
 void printDraw()
 {
-    printf("MATCH DRAW !!\n");   
+    printf("MATCH DRAW!!\n");   
 }

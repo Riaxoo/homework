@@ -20,9 +20,9 @@ int getCommand()
 
     for ( ; ; )
     {
-        puts("1. New games");
+        puts("1. New game");
         puts("2. Load Game");
-        puts("3. Quit");
+        puts("3. Quit Game");
         
         cmd = getChar();
   
@@ -89,7 +89,7 @@ int main()
     {
         int res = loadGame();
         if (res != 0)
-            puts("dosya yüklenemedi. Yeni oyun başlatılıyor.");
+            puts("There is no file to be loaded. Please start a new game\n");
         run();
     }
 
