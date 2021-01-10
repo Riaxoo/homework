@@ -1,18 +1,31 @@
 
 #include "global.h"
 
+int getChar()
+{
+    int c;
+    do 
+    {
+        c = getchar();
+    }
+    while (c == '\n' || c == EOF);
+
+    return c;
+}
 
 int getCommand()
 {
     int cmd = -1;
+    fflush(stdin);
+
     for ( ; ; )
     {
         puts("1. New games");
         puts("2. Load Game");
         puts("3. Quit");
         
-        cmd = getchar();
-
+        cmd = getChar();
+  
         if (cmd > '0' && cmd < '4')
             break;
         
@@ -38,9 +51,8 @@ int main()
     char move[5], c;
 
     printf("Welcome to Chess\n");
-    printf("\n Do you want to read the instructions? (y/n) - ");
-//    scanf("%c",&c);
-    c = getchar();
+    printf("Do you want to read the instructions? (y/n) ");
+    scanf("%c", &c);
     if (c == 'y' || c == 'Y')
     {
         FILE *fptr;
@@ -51,6 +63,7 @@ int main()
         }
         else
         {
+            int c0;
             // todo instruction.txt de icinde oyunun yuklenebilir oldugunu da belirt.
             // load yazsın 
 
@@ -61,25 +74,22 @@ int main()
                 c = fgetc(fptr);
             }
             fclose(fptr);
-
-            printf("\nPress enter key to continue.... ");
- //           fflush(stdin);
-            getchar();
-            printf("\n");
-
         }
     }
 
-    int cmd = getCommand();
+    printf("\n\n");
 
+    int cmd = getCommand();
 
     if (cmd == '1')
     {
         run();
     }
-    else if (c == '2')
+    else if (cmd == '2')
     {
-        loadGame();
+        int res = loadGame();
+        if (res != 0)
+            puts("dosya yüklenemedi. Yeni oyun başlatılıyor.");
         run();
     }
 

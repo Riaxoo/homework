@@ -10,6 +10,9 @@
 void run(void);
 void quit(void);
 
+int loadGame();
+void saveGame();
+
 void printInvalidMove(void);
 void printCheckmate(void);
 void printStalemate(void);
