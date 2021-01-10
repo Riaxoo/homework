@@ -1,5 +1,5 @@
-#ifndef __global.h
-#define __global.h
+#ifndef __global_h
+#define __global_h
 
 #include<stdio.h>
 #include<string.h>
